@@ -1,0 +1,321 @@
+%% 外星人入侵游戏 - 类关系图
+%% 使用 Mermaid 类图语法
+
+classDiagram
+    %% ========== 核心游戏类 ==========
+    class AlienInvasion {
+        -Settings settings
+        -GameStats stats
+        -Ship ship
+        -UpgradeSystem upgrade_system
+        -SkillSystem skill_system
+        -EquipmentManager equipment_manager
+        -UltimateSkill ultimate_skill
+        -Scoreboard sb
+        -TreasureEffects treasure_effects
+        -SoundManager sound_manager
+        +run_game()
+        +_check_events()
+        +_check_keydown_events()
+        +_update_screen()
+        +_check_bullet_alien_collisions()
+        +_check_treasure_collisions()
+        +_apply_upgrade_attributes()
+        +_ship_hit()
+    }
+
+    %% ========== 配置和统计类 ==========
+    class Settings {
+        +screen_width
+        +screen_height
+        +ship_speed
+        +bullet_speed
+        +alien_speed
+        +increase_speed()
+    }
+
+    class GameStats {
+        +ship_left
+        +score
+        +level
+        +combo
+        +high_score
+        +show_upgrade_menu
+        +update_combo()
+        +update_combo_timer()
+        +get_combo_multiplier()
+        +save_high_score()
+    }
+
+    %% ========== 游戏实体类（继承Sprite）==========
+    class Sprite {
+        <<pygame.sprite.Sprite>>
+    }
+
+    class Ship {
+        +image
+        +rect
+        +moving_right
+        +moving_left
+        +update()
+        +blitme()
+        +center_ship()
+    }
+
+    class Alien {
+        +image
+        +rect
+        +vx
+        +vy
+        +update()
+        +check_edges()
+    }
+
+    class Bullet {
+        +rect
+        +y
+        +update()
+        +draw_bullet()
+    }
+
+    class AlienBullet {
+        +rect
+        +y
+        +update()
+        +draw_bullet()
+    }
+
+    class Missile {
+        +target
+        +speed
+        +update()
+        +draw()
+    }
+
+    class LaserBullet {
+        +penetration_count
+        +hit_aliens
+        +update()
+        +can_penetrate()
+        +draw()
+    }
+
+    class Treasure {
+        +treasure_type
+        +rect
+        +update()
+        +draw()
+    }
+
+    class Explosion {
+        +frames
+        +current_frame
+        +update()
+        +draw()
+        +is_finished()
+    }
+
+    %% ========== 游戏系统类 ==========
+    class UpgradeSystem {
+        +player_level
+        +experience
+        +attack_level
+        +fire_rate_level
+        +speed_level
+        +add_experience()
+        +_level_up()
+        +upgrade_attack()
+        +upgrade_fire_rate()
+        +upgrade_speed()
+        +upgrade_health()
+        +upgrade_bullet_count()
+        +get_experience_percentage()
+    }
+
+    class SkillSystem {
+        +active_skills
+        +passive_skills
+        +unlock_skill()
+        +upgrade_skill()
+        +use_skill()
+        +can_use_skill()
+        +update()
+        +check_critical()
+        +check_lifesteal()
+        +check_split()
+        +is_shield_active()
+        +is_laser_beam_active()
+    }
+
+    class EquipmentManager {
+        +equipped_weapon
+        +equipped_armor
+        +equipped_engine
+        +equipped_core
+        +inventory
+        +generate_equipment()
+        +equip()
+        +unequip()
+        +_update_total_bonuses()
+        +_apply_equipment_bonuses()
+    }
+
+    class Equipment {
+        +equipment_type
+        +quality
+        +level
+        +attack_bonus
+        +fire_rate_bonus
+        +health_bonus
+        +speed_bonus
+        +get_color()
+        +get_description()
+    }
+
+    class UltimateSkill {
+        +charge
+        +charge_required
+        +is_active
+        +add_kill()
+        +can_use_ultimate()
+        +use_ultimate()
+        +update()
+        +_activate_nuke()
+        +_activate_time_stop()
+        +_activate_meteor_shower()
+        +_activate_laser_beam()
+    }
+
+    class TreasureEffects {
+        +laser_active
+        +shield_active
+        +missile_active
+        +slow_time_active
+        +activate_effect()
+        +update()
+        +is_laser_active()
+        +is_shield_active()
+        +hit_shield()
+        +can_fire_missile()
+        +fire_missile()
+        +get_score_multiplier()
+    }
+
+    class TreasureChest {
+        +chest_type
+        +rewards
+        +_generate_chest_type()
+        +_generate_rewards()
+        +open()
+    }
+
+    %% ========== UI界面类 ==========
+    class Scoreboard {
+        +score_image
+        +high_score_image
+        +level_image
+        +prep_score()
+        +prep_high_score()
+        +prep_level()
+        +prep_ship()
+        +prep_combo()
+        +show_score()
+        +_draw_experience_bar()
+    }
+
+    class UpgradeMenu {
+        +options
+        +selected_index
+        +draw()
+        +handle_keydown()
+        +_build_options()
+    }
+
+    class StartScreen {
+        +title_image
+        +instruction_images
+        +draw()
+        +_prep_texts()
+    }
+
+    class ChestRewardUI {
+        +is_showing
+        +rewards
+        +show_rewards()
+        +update()
+        +draw()
+        +handle_keydown()
+        +_apply_rewards()
+    }
+
+    class Button {
+        +rect
+        +msg_image
+        +is_hovered
+        +draw_button()
+        +check_hover()
+    }
+
+    %% ========== 工具类 ==========
+    class SoundManager {
+        +sounds
+        +play_shoot()
+        +play_explosion()
+        +play_ship_hit()
+    }
+
+    %% ========== 继承关系 ==========
+    Sprite <|-- Ship
+    Sprite <|-- Alien
+    Sprite <|-- Bullet
+    Sprite <|-- AlienBullet
+    Sprite <|-- Missile
+    Sprite <|-- LaserBullet
+    Sprite <|-- Treasure
+    Sprite <|-- Explosion
+
+    %% ========== 组合关系（AlienInvasion包含其他类）==========
+    AlienInvasion *-- Settings : uses
+    AlienInvasion *-- GameStats : uses
+    AlienInvasion *-- Ship : contains
+    AlienInvasion *-- UpgradeSystem : contains
+    AlienInvasion *-- SkillSystem : contains
+    AlienInvasion *-- EquipmentManager : contains
+    AlienInvasion *-- UltimateSkill : contains
+    AlienInvasion *-- Scoreboard : contains
+    AlienInvasion *-- TreasureEffects : contains
+    AlienInvasion *-- SoundManager : contains
+    AlienInvasion *-- UpgradeMenu : contains
+    AlienInvasion *-- StartScreen : contains
+    AlienInvasion *-- ChestRewardUI : contains
+    AlienInvasion *-- Button : contains
+
+    %% ========== 依赖关系 ==========
+    UpgradeSystem ..> Settings : uses
+    UpgradeSystem ..> GameStats : uses
+    SkillSystem ..> Settings : uses
+    SkillSystem ..> GameStats : uses
+    EquipmentManager ..> Equipment : creates
+    EquipmentManager ..> UpgradeSystem : uses
+    EquipmentManager ..> SkillSystem : uses
+    UltimateSkill ..> Settings : uses
+    UltimateSkill ..> GameStats : uses
+    TreasureEffects ..> Settings : uses
+    TreasureEffects ..> GameStats : uses
+    Scoreboard ..> Settings : uses
+    Scoreboard ..> GameStats : uses
+    Scoreboard ..> UpgradeSystem : uses
+    UpgradeMenu ..> UpgradeSystem : uses
+    UpgradeMenu ..> SkillSystem : uses
+    ChestRewardUI ..> EquipmentManager : uses
+    ChestRewardUI ..> UpgradeSystem : uses
+
+    %% ========== 游戏实体组关系 ==========
+    AlienInvasion o-- "Group" Alien : manages
+    AlienInvasion o-- "Group" Bullet : manages
+    AlienInvasion o-- "Group" AlienBullet : manages
+    AlienInvasion o-- "Group" Missile : manages
+    AlienInvasion o-- "Group" LaserBullet : manages
+    AlienInvasion o-- "Group" Treasure : manages
+    AlienInvasion o-- "Group" Explosion : manages
+

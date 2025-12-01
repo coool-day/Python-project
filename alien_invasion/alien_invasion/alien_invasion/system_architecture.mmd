@@ -1,0 +1,98 @@
+%% 外星人入侵游戏 - 系统架构图
+%% 展示主要系统模块及其依赖关系
+
+graph LR
+    subgraph "核心控制器"
+        AI[AlienInvasion<br/>游戏主类]
+    end
+    
+    subgraph "配置层"
+        S[Settings<br/>游戏配置]
+        GS[GameStats<br/>游戏统计]
+    end
+    
+    subgraph "游戏实体层"
+        Ship[Ship<br/>飞船]
+        Alien[Alien<br/>外星人]
+        Bullet[Bullet<br/>子弹]
+        Treasure[Treasure<br/>道具]
+    end
+    
+    subgraph "游戏系统层"
+        US[UpgradeSystem<br/>升级系统]
+        SS[SkillSystem<br/>技能系统]
+        EM[EquipmentManager<br/>装备管理]
+        USkill[UltimateSkill<br/>大招系统]
+        TE[TreasureEffects<br/>道具效果]
+    end
+    
+    subgraph "UI界面层"
+        SB[Scoreboard<br/>记分牌]
+        UM[UpgradeMenu<br/>升级菜单]
+        SScreen[StartScreen<br/>开始界面]
+        CRUI[ChestRewardUI<br/>宝箱界面]
+    end
+    
+    subgraph "工具层"
+        SM[SoundManager<br/>音效管理]
+        EQ[Equipment<br/>装备类]
+    end
+    
+    %% 核心控制器依赖
+    AI --> S
+    AI --> GS
+    AI --> Ship
+    AI --> Alien
+    AI --> Bullet
+    AI --> Treasure
+    AI --> US
+    AI --> SS
+    AI --> EM
+    AI --> USkill
+    AI --> TE
+    AI --> SB
+    AI --> UM
+    AI --> SScreen
+    AI --> CRUI
+    AI --> SM
+    
+    %% 系统层依赖配置层
+    US --> S
+    US --> GS
+    SS --> S
+    SS --> GS
+    EM --> S
+    EM --> GS
+    USkill --> S
+    USkill --> GS
+    TE --> S
+    TE --> GS
+    
+    %% 系统层内部依赖
+    EM --> EQ
+    EM --> US
+    EM --> SS
+    
+    %% UI层依赖
+    SB --> S
+    SB --> GS
+    SB --> US
+    UM --> US
+    UM --> SS
+    CRUI --> EM
+    CRUI --> US
+    
+    %% 样式
+    style AI fill:#FF6B6B,stroke:#C92A2A,stroke-width:3px,color:#fff
+    style S fill:#4ECDC4,stroke:#2C7873,stroke-width:2px,color:#fff
+    style GS fill:#4ECDC4,stroke:#2C7873,stroke-width:2px,color:#fff
+    style US fill:#95E1D3,stroke:#3D9970,stroke-width:2px
+    style SS fill:#95E1D3,stroke:#3D9970,stroke-width:2px
+    style EM fill:#95E1D3,stroke:#3D9970,stroke-width:2px
+    style USkill fill:#95E1D3,stroke:#3D9970,stroke-width:2px
+    style TE fill:#95E1D3,stroke:#3D9970,stroke-width:2px
+    style SB fill:#FFE66D,stroke:#F39C12,stroke-width:2px
+    style UM fill:#FFE66D,stroke:#F39C12,stroke-width:2px
+    style SScreen fill:#FFE66D,stroke:#F39C12,stroke-width:2px
+    style CRUI fill:#FFE66D,stroke:#F39C12,stroke-width:2px
+

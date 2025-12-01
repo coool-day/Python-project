@@ -1,0 +1,94 @@
+%% 外星人入侵游戏 - 系统交互流程图
+%% 展示主要系统之间的交互和关键方法调用
+
+graph TB
+    Start([游戏开始]) --> Init[AlienInvasion.__init__]
+    
+    Init --> InitSettings[初始化Settings]
+    Init --> InitStats[初始化GameStats]
+    Init --> InitUpgrade[初始化UpgradeSystem]
+    Init --> InitSkill[初始化SkillSystem]
+    Init --> InitEquip[初始化EquipmentManager]
+    Init --> InitUltimate[初始化UltimateSkill]
+    Init --> InitUI[初始化UI组件]
+    Init --> InitEntities[创建游戏实体]
+    
+    InitEntities --> GameLoop[run_game 主循环]
+    
+    GameLoop --> CheckEvents[_check_events]
+    CheckEvents --> CheckKeydown[_check_keydown_events]
+    CheckEvents --> CheckMouse[鼠标事件处理]
+    
+    CheckKeydown --> SkillInput{技能按键?}
+    SkillInput -->|1-5| UseSkill[skill_system.use_skill]
+    SkillInput -->|U| UseUltimate[ultimate_skill.use_ultimate]
+    SkillInput -->|Space| FireBullet[_fire_bullet]
+    
+    GameLoop --> UpdateGame[更新游戏状态]
+    UpdateGame --> UpdateShip[ship.update]
+    UpdateGame --> UpdateBullets[_update_bullets]
+    UpdateGame --> UpdateAliens[_update_aliens]
+    UpdateGame --> UpdateTreasures[_update_treasures]
+    UpdateGame --> UpdateEffects[treasure_effects.update]
+    UpdateGame --> UpdateSkills[skill_system.update]
+    UpdateGame --> UpdateUltimate[ultimate_skill.update]
+    
+    UpdateGame --> CheckCollisions[_check_bullet_alien_collisions]
+    CheckCollisions --> HitAlien[击中外星人]
+    HitAlien --> AddExp[upgrade_system.add_experience]
+    HitAlien --> AddScore[stats.score +=]
+    HitAlien --> AddCombo[stats.update_combo]
+    HitAlien --> AddUltimateCharge[ultimate_skill.add_kill]
+    HitAlien --> DropTreasure{15%概率}
+    DropTreasure -->|是| CreateTreasure[创建Treasure]
+    
+    AddExp --> CheckLevelUp{经验值足够?}
+    CheckLevelUp -->|是| ShowUpgradeMenu[显示升级菜单]
+    ShowUpgradeMenu --> SelectUpgrade[upgrade_menu.handle_keydown]
+    SelectUpgrade --> ApplyUpgrade[upgrade_system.upgrade_*]
+    
+    UpdateGame --> CheckTreasureCollision[_check_treasure_collisions]
+    CheckTreasureCollision --> CollectTreasure[拾取道具]
+    CollectTreasure --> ActivateEffect[treasure_effects.activate_effect]
+    
+    UpdateGame --> CheckAlienHit[_check_aliens_bottom]
+    CheckAlienHit --> ShipHit{飞船被击中?}
+    ShipHit -->|是| HandleShipHit[_ship_hit]
+    HandleShipHit --> ResetEffects[treasure_effects.reset]
+    HandleShipHit --> ResetSkills[skill_system.reset]
+    HandleShipHit --> LoseLife[stats.ship_left -= 1]
+    
+    UpdateGame --> ApplyAttributes[_apply_upgrade_attributes]
+    ApplyAttributes --> ApplyUpgradeAttrs[应用升级属性]
+    ApplyAttributes --> ApplyEquipAttrs[equipment_manager._apply_equipment_bonuses]
+    
+    GameLoop --> UpdateScreen[_update_screen]
+    UpdateScreen --> DrawEntities[绘制游戏实体]
+    UpdateScreen --> DrawUI[绘制UI界面]
+    DrawUI --> DrawScoreboard[sb.show_score]
+    DrawUI --> DrawSkills[绘制技能UI]
+    DrawUI --> DrawEquip[绘制装备UI]
+    DrawUI --> DrawUltimate[绘制大招UI]
+    
+    UpdateScreen --> CheckLevelComplete{关卡完成?}
+    CheckLevelComplete -->|是| CheckChest{需要宝箱?}
+    CheckChest -->|每5关或30%| ShowChest[显示宝箱奖励]
+    ShowChest --> OpenChest[treasure_chest.open]
+    OpenChest --> ShowRewards[chest_reward_ui.show_rewards]
+    ShowRewards --> ApplyRewards[_apply_rewards]
+    ApplyRewards --> AddEquip[equipment_manager.add_to_inventory]
+    ApplyRewards --> AddExpReward[upgrade_system.add_experience]
+    
+    GameLoop --> End{游戏结束?}
+    End -->|否| GameLoop
+    End -->|是| SaveScore[stats.save_high_score]
+    SaveScore --> Exit([退出游戏])
+    
+    style Start fill:#90EE90
+    style Exit fill:#FFB6C1
+    style HitAlien fill:#FFD700
+    style ShowUpgradeMenu fill:#87CEEB
+    style ShowChest fill:#DDA0DD
+    style UseSkill fill:#FFA07A
+    style UseUltimate fill:#FF6347
+
