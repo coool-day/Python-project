@@ -1,0 +1,142 @@
+{% extends 'learning_logs/base.html' %}
+
+{% block page_header %}
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="mb-0" style="color: #2c3e50;">
+      📑 我的学习主题
+    </h1>
+    <div class="d-flex gap-2">
+      <a href="{% url 'learning_logs:statistics' %}" 
+         class="btn btn-outline-info btn-sm">
+        📊 统计
+      </a>
+      <a href="{% url 'learning_logs:export_data' 'json' %}" 
+         class="btn btn-outline-success btn-sm">
+        📥 导出
+      </a>
+    </div>
+  </div>
+{% endblock page_header %}
+
+{% block content %}
+
+  <!-- 搜索框 -->
+  <form method="get" class="mb-4">
+    <div class="input-group">
+      <input type="text" 
+             name="search" 
+             class="form-control form-control-lg" 
+             placeholder="🔍 搜索主题..." 
+             value="{{ search_query }}">
+      <button class="btn btn-primary btn-lg" type="submit">搜索</button>
+      {% if search_query %}
+        <a href="{% url 'learning_logs:topics' %}" class="btn btn-outline-secondary btn-lg">清除</a>
+      {% endif %}
+    </div>
+  </form>
+
+  {% if search_query %}
+    <div class="alert alert-info mb-3">
+      找到 <strong>{{ total_count }}</strong> 个匹配的主题
+    </div>
+  {% endif %}
+
+  {% if topics %}
+  <div class="list-group mb-4">
+    {% for topic in topics %}
+      <div class="list-group-item topic-card border rounded mb-3 shadow-sm border-start border-3 border-{{ topic.color|default:'primary' }}">
+        {% if topic.cover_image_url %}
+          <div class="topic-card-cover mb-2" style="background-image: url('{{ topic.cover_image_url }}');">
+            <div class="topic-card-cover-overlay">
+              <span class="topic-card-icon">
+                {{ topic.icon|default:"📌" }}
+              </span>
+            </div>
+          </div>
+        {% endif %}
+        <div class="d-flex justify-content-between align-items-center">
+          <a href="{% url 'learning_logs:topic' topic.id %}" 
+             class="text-decoration-none flex-grow-1"
+             style="transition: all 0.3s ease;">
+            <span class="fw-semibold" style="color: #2c3e50; font-size: 1.1rem;">
+              {% if not topic.cover_image_url %}
+                {{ topic.icon|default:"📌" }}
+              {% endif %}
+              {{ topic.text }}
+            </span>
+          </a>
+          <div class="d-flex gap-2">
+            <span class="badge bg-{{ topic.color|default:'primary' }} me-1">
+              主题
+            </span>
+            <a href="{% url 'learning_logs:delete_topic' topic.id %}" 
+               class="btn btn-sm btn-outline-danger"
+               onclick="return confirm('确定要删除主题 {{ topic.text }} 吗？这将删除该主题下的所有笔记！');">
+              🗑️
+            </a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+    <!-- 分页 -->
+    {% if topics.has_other_pages %}
+      <nav aria-label="主题分页">
+        <ul class="pagination justify-content-center">
+          {% if topics.has_previous %}
+            <li class="page-item">
+              <a class="page-link" href="?page=1{% if search_query %}&search={{ search_query }}{% endif %}">首页</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="?page={{ topics.previous_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}">上一页</a>
+      </li>
+          {% endif %}
+          
+          <li class="page-item active">
+            <span class="page-link">
+              第 {{ topics.number }} 页，共 {{ topics.paginator.num_pages }} 页
+            </span>
+          </li>
+          
+          {% if topics.has_next %}
+            <li class="page-item">
+              <a class="page-link" href="?page={{ topics.next_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}">下一页</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="?page={{ topics.paginator.num_pages }}{% if search_query %}&search={{ search_query }}{% endif %}">末页</a>
+            </li>
+          {% endif %}
+        </ul>
+      </nav>
+    {% endif %}
+  {% else %}
+    <div class="alert alert-info border-0 shadow-sm mb-4" role="alert">
+      <div class="d-flex align-items-center">
+        <span class="me-2" style="font-size: 1.5rem;">📝</span>
+        <div>
+          <h5 class="alert-heading mb-1">
+            {% if search_query %}
+              没有找到匹配的主题
+            {% else %}
+              还没有添加任何主题
+            {% endif %}
+          </h5>
+          <p class="mb-0">
+            {% if search_query %}
+              尝试使用其他关键词搜索，或 <a href="{% url 'learning_logs:topics' %}">查看所有主题</a>
+            {% else %}
+              开始创建你的第一个学习主题吧！
+            {% endif %}
+          </p>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  <a href="{% url 'learning_logs:new_topic' %}" 
+     class="btn btn-primary btn-lg px-4">
+    ➕ 添加新主题
+  </a>
+
+{% endblock content %}

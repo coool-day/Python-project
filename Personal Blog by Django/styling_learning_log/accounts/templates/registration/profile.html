@@ -1,0 +1,90 @@
+{% extends 'learning_logs/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block page_header %}
+  <h1 class="mb-4" style="color: #2c3e50;">
+    👤 用户资料
+  </h1>
+{% endblock page_header %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card shadow-sm border-0 mb-4">
+        <div class="card-body p-4">
+          <h3 class="card-title mb-4">📋 基本信息</h3>
+          
+          <div class="mb-3">
+            <label class="form-label fw-semibold">用户名</label>
+            <div class="form-control-plaintext">{{ user.username }}</div>
+          </div>
+          
+          <div class="mb-3">
+            <label class="form-label fw-semibold">邮箱</label>
+            <div class="form-control-plaintext">
+              {{ user.email|default:"未设置" }}
+            </div>
+          </div>
+          
+          <div class="mb-3">
+            <label class="form-label fw-semibold">注册时间</label>
+            <div class="form-control-plaintext">
+              {{ user.date_joined|date:'Y年m月d日 H:i' }}
+            </div>
+          </div>
+          
+          <div class="mb-3">
+            <label class="form-label fw-semibold">最后登录</label>
+            <div class="form-control-plaintext">
+              {{ user.last_login|date:'Y年m月d日 H:i'|default:"从未登录" }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="card shadow-sm border-0 mb-4">
+        <div class="card-body p-4">
+          <h3 class="card-title mb-4">📊 学习统计</h3>
+          
+          <div class="mb-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="text-muted">主题数量</span>
+              <span class="fw-bold fs-4" style="color: #4a90e2;">{{ topics_count }}</span>
+            </div>
+          </div>
+          
+          <div class="mb-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="text-muted">笔记数量</span>
+              <span class="fw-bold fs-4" style="color: #4a90e2;">{{ entries_count }}</span>
+            </div>
+          </div>
+          
+          <hr>
+          
+          <div class="d-grid gap-2">
+            <a href="{% url 'learning_logs:statistics' %}" 
+               class="btn btn-outline-info">
+              📊 查看详细统计
+            </a>
+            <a href="{% url 'accounts:password_change' %}" 
+               class="btn btn-outline-warning">
+              🔑 修改密码
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-4">
+    <a href="{% url 'learning_logs:topics' %}" 
+       class="btn btn-outline-secondary">
+      ← 返回主题列表
+    </a>
+  </div>
+
+{% endblock content %}
+

@@ -1,0 +1,144 @@
+{% extends 'learning_logs/base.html' %}
+{% load learning_logs_extras %}
+
+{% block page_header %}
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="mb-0" style="color: #2c3e50;">
+      📚 {{ topic.text }}
+    </h1>
+    <div class="d-flex gap-2">
+      <button type="button"
+              class="btn btn-outline-secondary btn-sm topic-print-btn">
+        🖨 导出/打印本主题
+      </button>
+      <a href="{% url 'learning_logs:delete_topic' topic.id %}" 
+         class="btn btn-outline-danger btn-sm">
+        🗑️ 删除主题
+      </a>
+      <a href="{% url 'learning_logs:new_entry' topic.id %}" 
+         class="btn btn-primary">
+        ✏️ 添加新笔记
+      </a>
+    </div>
+  </div>
+{% endblock page_header %}
+
+{% block content %}
+
+  <!-- 搜索框 -->
+  <form method="get" class="mb-4">
+    <div class="input-group">
+      <input type="text" 
+             name="search" 
+             class="form-control" 
+             placeholder="🔍 搜索笔记..." 
+             value="{{ search_query }}">
+      <button class="btn btn-primary" type="submit">搜索</button>
+      {% if search_query %}
+        <a href="{% url 'learning_logs:topic' topic.id %}" class="btn btn-outline-secondary">清除</a>
+      {% endif %}
+    </div>
+  </form>
+
+  {% if search_query %}
+    <div class="alert alert-info mb-3">
+      找到 <strong>{{ total_count }}</strong> 条匹配的笔记
+    </div>
+  {% endif %}
+
+  {% for entry in entries %}
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <div>
+          <span class="text-muted small">📅</span>
+          <span class="fw-semibold ms-1">
+            {{ entry.date_added|date:'Y年m月d日 H:i' }}
+          </span>
+        </div>
+        <div class="d-flex gap-2">
+          <a href="{% url 'learning_logs:edit_entry' entry.id %}" 
+             class="btn btn-sm btn-outline-secondary">
+            ✏️ 编辑
+          </a>
+          <a href="{% url 'learning_logs:delete_entry' entry.id %}" 
+             class="btn btn-sm btn-outline-danger">
+            🗑️ 删除
+          </a>
+        </div>
+      </div>
+      <div class="card-body">
+        {% if entry.is_markdown %}
+          <div class="entry-content markdown-content" style="color: #444; line-height: 1.8; font-size: 1.05rem;">
+            {{ entry.text|markdown|safe }}
+          </div>
+        {% else %}
+          <div class="entry-content" style="color: #444; line-height: 1.8; font-size: 1.05rem;">
+            {{ entry.text|linebreaks }}
+          </div>
+        {% endif %}
+        {% if entry.tags %}
+          <div class="mt-3">
+            {% for tag in entry.tags|split:"," %}
+              <span class="badge bg-secondary me-1">{{ tag|trim }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+        {% if entry.is_markdown %}
+          <div class="mt-3 d-flex flex-wrap gap-2">
+            <button type="button"
+                    class="btn btn-sm btn-outline-primary entry-copy-markdown-btn"
+                    data-markdown="{{ entry.text|escapejs }}">
+              📋 复制 Markdown
+            </button>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% empty %}
+    <div class="alert alert-light border shadow-sm text-center py-5" role="alert">
+      <div style="font-size: 3rem; margin-bottom: 1rem;">📝</div>
+      <h5 class="alert-heading mb-2" style="color: #6c757d;">
+        还没有任何笔记
+      </h5>
+      <p class="mb-3 text-muted">
+        开始记录你在这个主题上的学习心得吧！
+      </p>
+      <a href="{% url 'learning_logs:new_entry' topic.id %}" 
+         class="btn btn-primary">
+        ✏️ 添加第一条笔记
+      </a>
+    </div>
+  {% endfor %}
+
+  <!-- 分页 -->
+  {% if entries.has_other_pages %}
+    <nav aria-label="笔记分页" class="mt-4">
+      <ul class="pagination justify-content-center">
+        {% if entries.has_previous %}
+          <li class="page-item">
+            <a class="page-link" href="?page=1{% if search_query %}&search={{ search_query }}{% endif %}">首页</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="?page={{ entries.previous_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}">上一页</a>
+          </li>
+        {% endif %}
+        
+        <li class="page-item active">
+          <span class="page-link">
+            第 {{ entries.number }} 页，共 {{ entries.paginator.num_pages }} 页
+          </span>
+        </li>
+        
+        {% if entries.has_next %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ entries.next_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}">下一页</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="?page={{ entries.paginator.num_pages }}{% if search_query %}&search={{ search_query }}{% endif %}">末页</a>
+          </li>
+        {% endif %}
+      </ul>
+    </nav>
+  {% endif %}
+
+{% endblock content %}

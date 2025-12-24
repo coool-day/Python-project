@@ -1,0 +1,36 @@
+{% extends 'learning_logs/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block page_header %}
+  <h1 class="mb-4" style="color: #2c3e50;">
+    🔑 登录账户
+  </h1>
+{% endblock page_header %}
+
+{% block content %}
+  <div class="card shadow-sm border-0" style="max-width: 500px; margin: 0 auto;">
+    <div class="card-body p-4">
+      <p class="lead mb-4 text-center" style="color: #555;">
+        👋 欢迎回来！请登录你的账户
+      </p>
+
+  <form action="{% url 'accounts:login' %}" method='post'>
+    {% csrf_token %}
+    {% bootstrap_form form %}
+        <div class="mt-4 text-center">
+          {% bootstrap_button button_type="submit" content="🚀 登录" button_class="btn-primary btn-lg px-5" %}
+        </div>
+  </form>
+
+      <div class="mt-4 text-center">
+        <p class="text-muted mb-0">
+          还没有账户？
+          <a href="{% url 'accounts:register' %}" class="text-decoration-none">
+            ✨ 立即注册
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}

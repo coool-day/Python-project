@@ -1,0 +1,102 @@
+{% extends "learning_logs/base.html" %}
+{% load django_bootstrap5 %}
+
+{% block page_header %}
+  <div class="mb-3">
+    <a href="{% url 'learning_logs:topic' topic.id %}" 
+       class="text-decoration-none text-muted">
+      ← 返回主题
+    </a>
+  </div>
+  <h1 class="mb-4" style="color: #2c3e50;">
+    ✏️ 编辑笔记
+  </h1>
+  <p class="text-muted mb-0">
+    主题：<span class="fw-semibold">{{ topic.text }}</span>
+  </p>
+{% endblock page_header %}
+
+{% block content %}
+  <div class="card shadow-sm border-0">
+    <div class="card-body p-4">
+      <p class="lead mb-4" style="color: #555;">
+        📝 修改你的笔记内容
+      </p>
+
+  <form action="{% url 'learning_logs:edit_entry' entry.id %}" method='post' data-skip-validation="true">
+    {% csrf_token %}
+        {% bootstrap_form form %}
+        <div class="mt-4">
+          <button name="submit" class="btn btn-primary btn-lg px-4">
+            💾 保存修改
+          </button>
+          <a href="{% url 'learning_logs:topic' topic.id %}" 
+             class="btn btn-outline-secondary btn-lg px-4 ms-2">
+            ↩️ 取消
+          </a>
+        </div>
+  </form>
+    </div>
+  </div>
+
+  <!-- 初始化 EasyMDE Markdown 编辑器 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const textarea = document.querySelector('textarea[name="text"]');
+      if (textarea) {
+        // 移除 required 属性，避免浏览器原生验证阻止提交
+        textarea.removeAttribute('required');
+        
+        const easyMDE = new EasyMDE({
+          element: textarea,
+          spellChecker: false,
+          placeholder: '在这里记录你的学习心得、知识点、总结等...\n\n支持 Markdown 格式：\n- **粗体**\n- *斜体*\n- `代码`\n- # 标题\n- - 列表',
+          toolbar: ['bold', 'italic', 'heading', '|', 'quote', 'unordered-list', 'ordered-list', '|', 'link', 'image', 'code', 'table', '|', 'preview', 'side-by-side', 'fullscreen', '|', 'guide'],
+          status: ['lines', 'words', 'cursor'],
+          autosave: {
+            enabled: true,
+            uniqueId: 'edit_entry_' + {{ entry.id }},
+            delay: 1000,
+          },
+          renderingConfig: {
+            singleLineBreaks: false,
+            codeSyntaxHighlighting: true,
+          },
+          minHeight: '300px',
+        });
+
+        // 提交前同步内容回隐藏的 textarea，确保后端能收到 Markdown
+        const form = textarea.closest('form');
+        if (form) {
+          form.addEventListener('submit', function(e) {
+            // 确保在表单提交前同步 EasyMDE 的内容
+            const markdownContent = easyMDE.value() || '';
+            textarea.value = markdownContent;
+            // 确保 textarea 有值
+            if (!textarea.value && markdownContent) {
+              textarea.value = markdownContent;
+            }
+            console.log('表单提交：同步 EasyMDE 内容到 textarea，长度：', textarea.value.length);
+          }, true); // 使用捕获阶段，确保在其他监听器之前执行
+        }
+        
+        // 监听 is_markdown 复选框变化
+        const markdownCheckbox = document.querySelector('input[name="is_markdown"]');
+        if (markdownCheckbox) {
+          // 根据当前值设置
+          const isMarkdown = markdownCheckbox.checked;
+          
+          markdownCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+              // 如果启用 Markdown，确保编辑器可见
+              if (easyMDE) {
+                easyMDE.codemirror.refresh();
+              }
+            }
+          });
+        }
+      }
+    });
+  </script>
+
+{% endblock content %}

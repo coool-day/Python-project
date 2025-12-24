@@ -1,0 +1,61 @@
+{% extends "learning_logs/base.html" %}
+{% load django_bootstrap5 %}
+
+{% block page_header %}
+  <h1 class="mb-4" style="color: #2c3e50;">
+    ➕ 添加新主题
+  </h1>
+{% endblock page_header %}
+
+{% block content %}
+  <div class="card shadow-sm border-0">
+    <div class="card-body p-4">
+      <p class="lead mb-4" style="color: #555;">
+        📝 创建一个新的学习主题，给它选一个颜色、图标和封面，让学习更有仪式感
+      </p>
+
+      <form action="{% url 'learning_logs:new_topic' %}" method="post" data-skip-validation="true">
+    {% csrf_token %}
+        {% bootstrap_form form %}
+
+        <!-- 快速选择主题图标（emoji） -->
+        <div class="mb-3">
+          <label class="form-label">快速选择图标</label>
+          <div class="topic-emoji-picker">
+            <button type="button" class="btn btn-sm btn-light topic-emoji-option">📚</button>
+            <button type="button" class="btn btn-sm btn-light topic-emoji-option">💻</button>
+            <button type="button" class="btn btn-sm btn-light topic-emoji-option">🧠</button>
+            <button type="button" class="btn btn-sm btn-light topic-emoji-option">📝</button>
+            <button type="button" class="btn btn-sm btn-light topic-emoji-option">📈</button>
+            <button type="button" class="btn btn-sm btn-light topic-emoji-option">🎨</button>
+            <button type="button" class="btn btn-sm btn-light topic-emoji-option">🌱</button>
+          </div>
+          <small class="text-muted d-block mt-1">
+            点击上面的图标，会自动填入「主题图标」输入框，你也可以直接在输入框中键入任意 emoji。
+          </small>
+        </div>
+
+        <!-- 主题颜色预览 -->
+        <div class="mb-4">
+          <small class="text-muted">
+            当前颜色预览：
+            <span id="topic-color-preview" class="badge rounded-pill bg-primary ms-1">
+              示例 · Sample
+            </span>
+          </small>
+        </div>
+
+        <div class="mt-4">
+          <button name="submit" class="btn btn-primary btn-lg px-4">
+            ✅ 创建主题
+          </button>
+          <a href="{% url 'learning_logs:topics' %}" 
+             class="btn btn-outline-secondary btn-lg px-4 ms-2">
+            ↩️ 返回
+          </a>
+        </div>
+  </form>
+    </div>
+  </div>
+
+{% endblock content %}

@@ -1,0 +1,400 @@
+/* 学习笔记 - 自定义样式文件 */
+
+/* ==================== 基础样式 ==================== */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "微软雅黑", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==================== 导航栏样式 ==================== */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff !important;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #2c3e50 !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #4a90e2 !important;
+}
+
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #4a90e2 !important;
+}
+
+/* ==================== 主内容区域 ==================== */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1;
+}
+
+/* ==================== 卡片样式 ==================== */
+.card {
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+    font-weight: 500;
+    padding: 1rem 1.25rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* ==================== 按钮样式 ==================== */
+.btn-primary {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #357abd;
+    border-color: #357abd;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(74, 144, 226, 0.3);
+}
+
+.btn-danger {
+    transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(220, 53, 69, 0.3);
+}
+
+.btn-outline-secondary {
+    transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+    transform: translateY(-1px);
+}
+
+/* ==================== 表单样式 ==================== */
+.form-control {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+
+.form-label {
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+/* ==================== 列表样式 ==================== */
+.list-group-item {
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.list-group-item:hover {
+    border-left-color: #4a90e2;
+    background-color: #f8f9fa;
+    transform: translateX(5px);
+}
+
+.list-group-item-action {
+    text-decoration: none;
+}
+
+.list-group-item-action:hover {
+    color: #4a90e2;
+}
+
+/* ==================== 主题卡片封面与图标 ==================== */
+.topic-card {
+    overflow: hidden;
+    position: relative;
+}
+
+.topic-card-cover {
+    position: relative;
+    width: 100%;
+    padding-top: 40%; /* 约 2.5:1 比例的封面高度 */
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.topic-card-cover-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.35));
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0.5rem 0.75rem;
+}
+
+.topic-card-icon {
+    font-size: 1.6rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.topic-emoji-picker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+
+.topic-emoji-picker .btn {
+    font-size: 1.1rem;
+}
+
+/* ==================== 分页样式 ==================== */
+.pagination {
+    margin-top: 2rem;
+}
+
+.page-link {
+    color: #4a90e2;
+    transition: all 0.3s ease;
+}
+
+.page-link:hover {
+    color: #357abd;
+    background-color: #f8f9fa;
+}
+
+.page-item.active .page-link {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+}
+
+/* ==================== 消息提示样式 ==================== */
+.alert {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+/* ==================== 搜索框样式 ==================== */
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group .form-control {
+    border-radius: 8px 0 0 8px;
+}
+
+.input-group .btn {
+    border-radius: 0 8px 8px 0;
+}
+
+/* ==================== 笔记内容样式 ==================== */
+.entry-content {
+    color: #444;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* ==================== 代码块样式与复制按钮 ==================== */
+.markdown-content pre {
+    position: relative;
+    background-color: #0d1117;
+    border-radius: 6px;
+    padding: 0.75rem 0.75rem 0.75rem 0.9rem;
+    overflow: auto;
+    margin-bottom: 1rem;
+}
+
+.markdown-content pre code {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.9rem;
+}
+
+.code-copy-btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.75rem;
+    line-height: 1.2;
+    border-radius: 999px;
+    background-color: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.markdown-content pre:hover .code-copy-btn {
+    opacity: 1;
+}
+
+.code-copy-btn.copied {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+/* ==================== 响应式设计 ==================== */
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    
+    .btn-lg {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .display-3 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    main {
+        padding: 5px;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .navbar-nav {
+        text-align: center;
+    }
+    
+    .d-flex.gap-2 {
+        flex-direction: column;
+        gap: 0.5rem !important;
+    }
+    
+    .d-flex.gap-2 > * {
+        width: 100%;
+    }
+}
+
+/* ==================== 加载动画 ==================== */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(74, 144, 226, 0.3);
+    border-radius: 50%;
+    border-top-color: #4a90e2;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ==================== 工具类 ==================== */
+.text-primary-custom {
+    color: #4a90e2;
+}
+
+.bg-primary-custom {
+    background-color: #4a90e2;
+}
+
+.shadow-sm-custom {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.rounded-custom {
+    border-radius: 8px;
+}
+
+/* ==================== 打印样式 ==================== */
+@media print {
+    .navbar,
+    .btn,
+    .pagination,
+    .alert {
+        display: none;
+    }
+    
+    .card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
+

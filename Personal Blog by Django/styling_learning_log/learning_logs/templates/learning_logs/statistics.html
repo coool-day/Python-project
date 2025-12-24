@@ -1,0 +1,124 @@
+{% extends 'learning_logs/base.html' %}
+
+{% block page_header %}
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="mb-0" style="color: #2c3e50;">
+      📊 学习统计
+    </h1>
+    <div class="d-flex gap-2">
+      <a href="{% url 'learning_logs:export_data' 'json' %}" 
+         class="btn btn-outline-success btn-sm">
+        📥 导出 JSON
+      </a>
+      <a href="{% url 'learning_logs:export_data' 'csv' %}" 
+         class="btn btn-outline-success btn-sm">
+        📥 导出 CSV
+      </a>
+      <a href="{% url 'learning_logs:export_data' 'markdown' %}" 
+         class="btn btn-outline-success btn-sm">
+        📥 导出 Markdown
+      </a>
+    </div>
+  </div>
+{% endblock page_header %}
+
+{% block content %}
+
+  <!-- 统计卡片 -->
+  <div class="row mb-4">
+    <div class="col-md-6 mb-3">
+      <div class="card shadow-sm border-0">
+        <div class="card-body text-center">
+          <h2 class="display-4 mb-2">📚</h2>
+          <h3 class="mb-0">{{ topics_count }}</h3>
+          <p class="text-muted mb-0">学习主题</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <div class="card shadow-sm border-0">
+        <div class="card-body text-center">
+          <h2 class="display-4 mb-2">📝</h2>
+          <h3 class="mb-0">{{ entries_count }}</h3>
+          <p class="text-muted mb-0">学习笔记</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 主题统计 -->
+  {% if topic_stats %}
+    <div class="card shadow-sm border-0 mb-4">
+      <div class="card-header bg-light">
+        <h5 class="mb-0">📈 主题笔记数量排行</h5>
+      </div>
+      <div class="card-body">
+        <div class="list-group">
+          {% for topic_stat in topic_stats %}
+            <div class="list-group-item d-flex justify-content-between align-items-center">
+              <div>
+                <strong>{{ topic_stat.text }}</strong>
+                <small class="text-muted d-block">{{ topic_stat.date_added|date:'Y年m月d日' }}</small>
+              </div>
+              <span class="badge bg-primary rounded-pill">{{ topic_stat.entry_count }} 条笔记</span>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  <!-- 最近的主题 -->
+  {% if recent_topics %}
+    <div class="card shadow-sm border-0 mb-4">
+      <div class="card-header bg-light">
+        <h5 class="mb-0">🕐 最近创建的主题</h5>
+      </div>
+      <div class="card-body">
+        <div class="list-group">
+          {% for topic in recent_topics %}
+            <a href="{% url 'learning_logs:topic' topic.id %}" 
+               class="list-group-item list-group-item-action">
+              <div class="d-flex justify-content-between">
+                <span>{{ topic.text }}</span>
+                <small class="text-muted">{{ topic.date_added|date:'Y年m月d日 H:i' }}</small>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  <!-- 最近的活动 -->
+  {% if recent_entries %}
+    <div class="card shadow-sm border-0 mb-4">
+      <div class="card-header bg-light">
+        <h5 class="mb-0">📝 最近添加的笔记</h5>
+      </div>
+      <div class="card-body">
+        {% for entry in recent_entries %}
+          <div class="border-bottom pb-3 mb-3">
+            <div class="d-flex justify-content-between mb-2">
+              <strong>
+                <a href="{% url 'learning_logs:topic' entry.topic.id %}" class="text-decoration-none">
+                  {{ entry.topic.text }}
+                </a>
+              </strong>
+              <small class="text-muted">{{ entry.date_added|date:'Y年m月d日 H:i' }}</small>
+            </div>
+            <p class="text-muted mb-0">{{ entry.text|truncatewords:30 }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="text-center">
+    <a href="{% url 'learning_logs:topics' %}" class="btn btn-outline-secondary">
+      ↩️ 返回主题列表
+    </a>
+  </div>
+
+{% endblock content %}
+

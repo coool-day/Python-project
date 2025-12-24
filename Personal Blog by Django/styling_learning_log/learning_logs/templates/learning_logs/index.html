@@ -1,0 +1,76 @@
+{% extends 'learning_logs/base.html' %}
+
+{% block title %}欢迎 - 学习笔记与博客论坛{% endblock %}
+
+{% block page_header %}
+  <div class="p-4 mb-4 bg-white border rounded-3 shadow-sm">
+    <div class="container-fluid py-4">
+      <h1 class="display-4 fw-bold mb-4" style="color: #2c3e50;">
+        📚 学习笔记与博客论坛
+      </h1>
+      
+      <p class="lead mb-4" style="color: #555; line-height: 1.8;">
+        欢迎来到学习笔记平台！你可以：
+      </p>
+      
+      <ul class="lead mb-4" style="color: #555; line-height: 2.0;">
+        <li>📝 <strong>浏览博客论坛</strong>：查看所有人的博客文章，了解他人的学习心得</li>
+        <li>✍️ <strong>发布自己的博客</strong>：注册账号后即可发布文章，分享你的学习经验</li>
+        <li>📖 <strong>创建学习笔记</strong>：记录你正在学习的主题，随时添加笔记总结</li>
+      </ul>
+
+      <div class="d-flex gap-3 flex-wrap">
+        <a class="btn btn-primary btn-lg px-4 py-2"
+            href="{% url 'blogs:index' %}">
+          🚀 立即开始 - 浏览博客论坛 &raquo;
+        </a>
+        {% if not user.is_authenticated %}
+          <a class="btn btn-outline-primary btn-lg px-4 py-2"
+              href="{% url 'accounts:register' %}">
+            ✨ 注册账号 - 发布博客
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock page_header %}
+
+{% block content %}
+  <div class="row mt-4">
+    <div class="col-md-6 mb-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title">📝 博客论坛</h3>
+          <p class="card-text">
+            浏览所有人的博客文章，了解他人的学习心得和经验分享。
+            <strong>无需登录</strong>即可查看所有文章。
+          </p>
+          <a href="{% url 'blogs:index' %}" class="btn btn-primary">
+            进入博客论坛 →
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6 mb-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title">📖 学习笔记</h3>
+          <p class="card-text">
+            创建属于你自己的学习笔记，记录你正在学习的主题。
+            每当你在某个主题上学到新知识时，添加一条笔记来总结你的收获。
+          </p>
+          {% if user.is_authenticated %}
+            <a href="{% url 'learning_logs:topics' %}" class="btn btn-outline-primary">
+              我的主题 →
+            </a>
+          {% else %}
+            <a href="{% url 'accounts:register' %}" class="btn btn-outline-primary">
+              注册后使用 →
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

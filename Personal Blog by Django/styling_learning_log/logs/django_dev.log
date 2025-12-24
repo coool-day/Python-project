@@ -1,0 +1,506 @@
+INFO 2025-12-22 13:28:33,269 autoreload Watching for file changes with StatReloader
+INFO 2025-12-22 13:32:31,743 autoreload C:\Users\zhu72\source\repos\chapter_20\styling_learning_log\learning_logs\urls.py changed, reloading.
+INFO 2025-12-22 13:32:32,314 autoreload Watching for file changes with StatReloader
+INFO 2025-12-22 13:32:56,408 autoreload C:\Users\zhu72\source\repos\chapter_20\styling_learning_log\learning_logs\urls.py changed, reloading.
+INFO 2025-12-22 13:32:56,967 autoreload Watching for file changes with StatReloader
+INFO 2025-12-22 13:44:44,477 autoreload C:\Users\zhu72\source\repos\chapter_20\styling_learning_log\learning_logs\urls.py changed, reloading.
+INFO 2025-12-22 13:44:44,965 autoreload Watching for file changes with StatReloader
+INFO 2025-12-22 13:46:55,039 autoreload C:\Users\zhu72\source\repos\chapter_20\styling_learning_log\learning_logs\urls.py changed, reloading.
+INFO 2025-12-22 13:46:55,549 autoreload Watching for file changes with StatReloader
+INFO 2025-12-22 15:41:57,377 autoreload Watching for file changes with StatReloader
+INFO 2025-12-22 16:53:30,052 autoreload Watching for file changes with StatReloader
+INFO 2025-12-22 16:53:41,675 basehttp "GET / HTTP/1.1" 200 3820
+INFO 2025-12-22 16:53:41,767 basehttp "GET /static/js/custom.js HTTP/1.1" 304 0
+INFO 2025-12-22 16:53:41,767 basehttp "GET /static/css/custom.css HTTP/1.1" 304 0
+WARNING 2025-12-22 16:53:45,823 log Not Found: /favicon.ico
+WARNING 2025-12-22 16:53:45,825 basehttp "GET /favicon.ico HTTP/1.1" 404 5077
+INFO 2025-12-22 16:53:49,839 basehttp "GET /accounts/register/ HTTP/1.1" 200 5199
+INFO 2025-12-22 16:53:54,376 basehttp "GET /topics/ HTTP/1.1" 200 5791
+INFO 2025-12-22 16:53:56,205 basehttp "GET /topics/ HTTP/1.1" 200 5791
+INFO 2025-12-22 16:53:57,679 basehttp "GET /topics/1/ HTTP/1.1" 200 6656
+INFO 2025-12-22 16:54:01,707 basehttp "GET /delete_entry/2/ HTTP/1.1" 200 4659
+INFO 2025-12-22 16:54:03,534 basehttp "POST /delete_entry/2/ HTTP/1.1" 302 0
+INFO 2025-12-22 16:54:03,570 basehttp "GET /topics/1/ HTTP/1.1" 200 6040
+INFO 2025-12-22 16:54:07,768 basehttp "GET /delete_entry/1/ HTTP/1.1" 200 4637
+INFO 2025-12-22 16:54:09,640 basehttp "POST /delete_entry/1/ HTTP/1.1" 302 0
+INFO 2025-12-22 16:54:09,675 basehttp "GET /topics/1/ HTTP/1.1" 200 5153
+INFO 2025-12-22 16:54:12,423 basehttp "GET /delete_entry/3/ HTTP/1.1" 200 4660
+INFO 2025-12-22 16:54:14,307 basehttp "POST /delete_entry/3/ HTTP/1.1" 302 0
+INFO 2025-12-22 16:54:14,351 basehttp "GET /topics/1/ HTTP/1.1" 200 4736
+INFO 2025-12-22 16:54:23,510 basehttp "GET /topics/ HTTP/1.1" 200 5791
+INFO 2025-12-22 16:54:24,716 basehttp "GET /topics/2/ HTTP/1.1" 200 4439
+INFO 2025-12-22 16:54:27,594 basehttp "GET /topics/ HTTP/1.1" 200 5791
+INFO 2025-12-22 16:54:28,450 basehttp "GET /topics/1/ HTTP/1.1" 200 4443
+INFO 2025-12-22 16:54:40,879 basehttp "GET /delete_topic/1/ HTTP/1.1" 200 4336
+INFO 2025-12-22 16:54:51,777 basehttp "GET /topics/ HTTP/1.1" 200 5791
+INFO 2025-12-22 16:54:52,526 basehttp "GET / HTTP/1.1" 200 3820
+INFO 2025-12-22 16:54:53,705 basehttp "GET /accounts/register/ HTTP/1.1" 200 5199
+INFO 2025-12-22 16:54:56,951 basehttp "GET /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-12-22 16:54:56,965 basehttp "GET / HTTP/1.1" 200 3820
+INFO 2025-12-22 16:57:24,454 basehttp "GET /accounts/register/ HTTP/1.1" 200 5199
+INFO 2025-12-22 16:57:25,983 basehttp "GET /topics/ HTTP/1.1" 200 5791
+INFO 2025-12-22 16:57:28,195 basehttp "GET /new_topic/ HTTP/1.1" 200 5094
+INFO 2025-12-22 16:57:32,614 basehttp "POST /new_topic/ HTTP/1.1" 302 0
+INFO 2025-12-22 16:57:32,638 basehttp "GET /topics/ HTTP/1.1" 200 6937
+INFO 2025-12-22 16:57:35,009 basehttp "GET /topics/1/ HTTP/1.1" 200 4443
+INFO 2025-12-22 16:57:36,162 basehttp "GET /new_entry/1/ HTTP/1.1" 200 6879
+INFO 2025-12-22 16:58:25,636 basehttp "GET /new_entry/1/ HTTP/1.1" 302 0
+INFO 2025-12-22 16:58:25,662 basehttp "GET /accounts/login/?next=/new_entry/1/ HTTP/1.1" 200 3834
+INFO 2025-12-22 16:58:26,856 basehttp "GET /static/css/custom.css HTTP/1.1" 200 6196
+INFO 2025-12-22 16:58:26,954 basehttp "GET /static/js/custom.js HTTP/1.1" 200 17092
+WARNING 2025-12-22 16:58:33,152 log Not Found: /favicon.ico
+WARNING 2025-12-22 16:58:33,155 basehttp "GET /favicon.ico HTTP/1.1" 404 5077
+INFO 2025-12-22 16:58:42,936 basehttp "GET /topics/ HTTP/1.1" 302 0
+INFO 2025-12-22 16:58:42,955 basehttp "GET /accounts/login/?next=/topics/ HTTP/1.1" 200 3834
+INFO 2025-12-22 16:58:43,867 basehttp "GET /topics/ HTTP/1.1" 302 0
+INFO 2025-12-22 16:58:43,885 basehttp "GET /accounts/login/?next=/topics/ HTTP/1.1" 200 3834
+INFO 2025-12-22 16:58:44,384 basehttp "GET /topics/ HTTP/1.1" 302 0
+INFO 2025-12-22 16:58:44,417 basehttp "GET /accounts/login/?next=/topics/ HTTP/1.1" 200 3834
+INFO 2025-12-22 16:58:44,896 basehttp "GET / HTTP/1.1" 200 3091
+INFO 2025-12-22 16:58:46,108 basehttp "GET /accounts/register/ HTTP/1.1" 200 4470
+INFO 2025-12-22 16:58:48,352 basehttp "GET /topics/ HTTP/1.1" 302 0
+INFO 2025-12-22 16:58:48,371 basehttp "GET /accounts/login/?next=/topics/ HTTP/1.1" 200 3834
+INFO 2025-12-22 16:58:54,154 basehttp "GET /accounts/register/ HTTP/1.1" 200 4470
+INFO 2025-12-22 16:59:03,036 basehttp "GET / HTTP/1.1" 200 3091
+INFO 2025-12-22 16:59:03,793 basehttp "GET /accounts/register/ HTTP/1.1" 200 4470
+INFO 2025-12-22 16:59:05,246 basehttp "GET /topics/ HTTP/1.1" 302 0
+INFO 2025-12-22 16:59:05,258 basehttp "GET /accounts/login/?next=/topics/ HTTP/1.1" 200 3834
+INFO 2025-12-22 16:59:32,260 basehttp "POST /accounts/login/ HTTP/1.1" 200 4012
+INFO 2025-12-22 16:59:35,835 basehttp "GET /accounts/register/ HTTP/1.1" 200 4470
+INFO 2025-12-22 16:59:43,054 basehttp "POST /accounts/register/ HTTP/1.1" 200 4610
+INFO 2025-12-22 16:59:58,714 basehttp "POST /accounts/register/ HTTP/1.1" 200 4709
+INFO 2025-12-22 17:00:08,257 basehttp "POST /accounts/register/ HTTP/1.1" 200 4610
+INFO 2025-12-22 17:00:36,619 basehttp "POST /accounts/register/ HTTP/1.1" 200 4733
+INFO 2025-12-22 17:03:55,567 basehttp "POST /accounts/register/ HTTP/1.1" 200 4656
+INFO 2025-12-22 17:04:10,362 basehttp "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2025-12-22 17:04:10,377 basehttp "GET / HTTP/1.1" 200 3821
+INFO 2025-12-22 17:04:11,357 basehttp "GET /accounts/register/ HTTP/1.1" 200 5200
+INFO 2025-12-22 17:04:12,717 basehttp "GET /topics/ HTTP/1.1" 200 4549
+INFO 2025-12-22 17:04:14,274 basehttp "GET /new_topic/ HTTP/1.1" 200 5095
+INFO 2025-12-22 17:04:17,217 basehttp "POST /new_topic/ HTTP/1.1" 302 0
+INFO 2025-12-22 17:04:17,247 basehttp "GET /topics/ HTTP/1.1" 200 5268
+INFO 2025-12-22 17:04:18,427 basehttp "GET /topics/4/ HTTP/1.1" 200 4440
+INFO 2025-12-22 17:04:19,292 basehttp "GET /new_entry/4/ HTTP/1.1" 200 6876
+INFO 2025-12-22 17:04:53,244 basehttp "GET /topics/4/ HTTP/1.1" 200 4440
+INFO 2025-12-22 17:05:05,138 basehttp "GET /topics/ HTTP/1.1" 200 4959
+INFO 2025-12-22 17:05:05,790 basehttp "GET / HTTP/1.1" 200 3821
+INFO 2025-12-22 17:05:07,355 basehttp "GET /accounts/register/ HTTP/1.1" 200 5200
+INFO 2025-12-22 17:05:09,574 basehttp "GET /topics/ HTTP/1.1" 200 4959
+INFO 2025-12-22 17:05:11,388 basehttp "GET /statistics/ HTTP/1.1" 200 5799
+INFO 2025-12-22 17:05:14,100 basehttp "GET /export/markdown/ HTTP/1.1" 200 144
+INFO 2025-12-22 17:12:33,394 basehttp "GET /new_topic/ HTTP/1.1" 200 5095
+INFO 2025-12-22 17:13:02,498 basehttp "POST /new_topic/ HTTP/1.1" 302 0
+INFO 2025-12-22 17:13:02,522 basehttp "GET /topics/ HTTP/1.1" 200 6123
+INFO 2025-12-22 17:13:03,822 basehttp "GET /topics/5/ HTTP/1.1" 200 4450
+INFO 2025-12-22 17:13:04,788 basehttp "GET /new_entry/5/ HTTP/1.1" 200 6886
+INFO 2025-12-22 17:19:43,037 basehttp "GET /topics/ HTTP/1.1" 200 5804
+INFO 2025-12-22 17:19:44,631 basehttp "GET /topics/5/ HTTP/1.1" 200 4450
+INFO 2025-12-22 17:19:46,232 basehttp "GET /new_entry/5/ HTTP/1.1" 200 6886
+INFO 2025-12-22 22:12:42,963 autoreload Watching for file changes with StatReloader
+INFO 2025-12-22 22:13:18,895 basehttp "GET / HTTP/1.1" 200 4640
+INFO 2025-12-22 22:13:19,206 basehttp "GET /static/css/custom.css HTTP/1.1" 200 8112
+INFO 2025-12-22 22:13:19,207 basehttp "GET /static/js/custom.js HTTP/1.1" 200 23845
+WARNING 2025-12-22 22:13:25,530 log Not Found: /favicon.ico
+WARNING 2025-12-22 22:13:25,530 basehttp "GET /favicon.ico HTTP/1.1" 404 5077
+INFO 2025-12-22 22:13:28,656 basehttp "GET /accounts/register/ HTTP/1.1" 200 6019
+INFO 2025-12-22 22:13:30,054 basehttp "GET / HTTP/1.1" 200 4640
+INFO 2025-12-22 22:13:34,456 basehttp "GET /accounts/register/ HTTP/1.1" 200 6019
+INFO 2025-12-22 22:13:35,928 basehttp "GET / HTTP/1.1" 200 4640
+INFO 2025-12-22 22:13:48,593 basehttp "GET /accounts/register/ HTTP/1.1" 200 6019
+INFO 2025-12-22 22:13:58,101 basehttp "GET /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-12-22 22:13:58,123 basehttp "GET / HTTP/1.1" 200 4640
+INFO 2025-12-22 22:13:59,145 basehttp "GET /accounts/register/ HTTP/1.1" 200 6019
+INFO 2025-12-22 22:14:00,059 basehttp "GET /topics/ HTTP/1.1" 200 5716
+INFO 2025-12-22 22:14:14,503 basehttp "GET /new_topic/ HTTP/1.1" 200 7738
+INFO 2025-12-22 22:14:30,773 basehttp "GET /topics/ HTTP/1.1" 200 5716
+INFO 2025-12-22 22:14:34,717 basehttp "GET /statistics/ HTTP/1.1" 302 0
+INFO 2025-12-22 22:14:34,747 basehttp "GET /topics/ HTTP/1.1" 200 6052
+INFO 2025-12-22 22:14:35,643 basehttp "GET /export/json/ HTTP/1.1" 302 0
+INFO 2025-12-22 22:14:35,673 basehttp "GET /topics/ HTTP/1.1" 200 6046
+INFO 2025-12-22 22:14:36,468 basehttp "GET /export/json/ HTTP/1.1" 302 0
+INFO 2025-12-22 22:14:36,496 basehttp "GET /topics/ HTTP/1.1" 200 6046
+INFO 2025-12-22 22:14:38,643 basehttp "GET /statistics/ HTTP/1.1" 302 0
+INFO 2025-12-22 22:14:38,674 basehttp "GET /topics/ HTTP/1.1" 200 6052
+INFO 2025-12-22 22:14:45,663 basehttp "GET /export/json/ HTTP/1.1" 302 0
+INFO 2025-12-22 22:14:45,693 basehttp "GET /topics/ HTTP/1.1" 200 6046
+INFO 2025-12-22 22:14:52,471 basehttp "GET /new_topic/ HTTP/1.1" 200 7738
+INFO 2025-12-22 22:15:00,904 basehttp "POST /new_topic/ HTTP/1.1" 200 8141
+INFO 2025-12-22 22:15:12,813 basehttp "GET /topics/ HTTP/1.1" 200 5716
+INFO 2025-12-22 22:18:04,710 autoreload Watching for file changes with StatReloader
+INFO 2025-12-22 22:18:14,777 basehttp "GET /topics/ HTTP/1.1" 200 7794
+INFO 2025-12-22 22:18:18,818 basehttp "GET /topics/3/ HTTP/1.1" 200 5415
+INFO 2025-12-22 22:18:20,405 basehttp "GET / HTTP/1.1" 200 4640
+INFO 2025-12-22 22:18:21,661 basehttp "GET /topics/ HTTP/1.1" 200 7794
+INFO 2025-12-22 22:18:22,895 basehttp "GET /topics/2/ HTTP/1.1" 200 5411
+INFO 2025-12-22 22:18:23,961 basehttp "GET /topics/ HTTP/1.1" 200 7794
+INFO 2025-12-22 22:18:27,555 basehttp "GET /delete_topic/2/ HTTP/1.1" 200 5148
+INFO 2025-12-22 22:18:34,745 basehttp "POST /delete_topic/2/ HTTP/1.1" 302 0
+INFO 2025-12-22 22:18:34,774 basehttp "GET /topics/ HTTP/1.1" 200 7179
+INFO 2025-12-22 22:18:42,987 basehttp "GET /topics/3/ HTTP/1.1" 200 5415
+INFO 2025-12-22 22:18:43,943 basehttp "GET /new_entry/3/ HTTP/1.1" 200 7699
+INFO 2025-12-22 22:22:22,381 basehttp "GET /topics/3/ HTTP/1.1" 200 5415
+INFO 2025-12-22 22:22:23,646 basehttp "GET /new_entry/3/ HTTP/1.1" 200 7699
+INFO 2025-12-22 22:23:05,551 basehttp "GET /topics/3/ HTTP/1.1" 200 5415
+INFO 2025-12-22 22:23:16,987 basehttp "GET /topics/ HTTP/1.1" 200 6851
+INFO 2025-12-22 22:23:18,119 basehttp "GET /topics/1/ HTTP/1.1" 200 5415
+INFO 2025-12-22 22:23:19,242 basehttp "GET /topics/ HTTP/1.1" 200 6851
+INFO 2025-12-22 22:23:20,177 basehttp "GET /topics/3/ HTTP/1.1" 200 5415
+INFO 2025-12-22 22:25:21,500 autoreload C:\Users\zhu72\source\repos\chapter_20\styling_learning_log\learning_logs\views.py changed, reloading.
+INFO 2025-12-22 22:25:22,495 autoreload Watching for file changes with StatReloader
+INFO 2025-12-22 22:27:09,047 autoreload C:\Users\zhu72\source\repos\chapter_20\styling_learning_log\learning_logs\views.py changed, reloading.
+INFO 2025-12-22 22:27:10,167 autoreload Watching for file changes with StatReloader
+INFO 2025-12-22 22:28:16,522 autoreload C:\Users\zhu72\source\repos\chapter_20\styling_learning_log\learning_logs\views.py changed, reloading.
+INFO 2025-12-22 22:28:17,628 autoreload Watching for file changes with StatReloader
+INFO 2025-12-22 22:28:41,334 basehttp "GET /topics/3/ HTTP/1.1" 200 5415
+INFO 2025-12-22 22:28:41,374 basehttp "GET /static/css/custom.css HTTP/1.1" 304 0
+INFO 2025-12-22 22:28:41,518 basehttp "GET /static/js/custom.js HTTP/1.1" 200 23873
+INFO 2025-12-22 22:28:42,316 basehttp "GET /new_entry/3/ HTTP/1.1" 200 8007
+INFO 2025-12-22 22:28:50,236 basehttp "POST /new_entry/3/ HTTP/1.1" 302 0
+INFO 2025-12-22 22:28:50,448 basehttp "GET /topics/3/ HTTP/1.1" 200 6723
+INFO 2025-12-22 22:28:50,502 basehttp "GET /static/js/custom.js HTTP/1.1" 304 0
+INFO 2025-12-22 22:29:03,271 basehttp "GET /new_entry/3/ HTTP/1.1" 200 8007
+INFO 2025-12-22 22:29:03,332 basehttp "GET /static/js/custom.js HTTP/1.1" 304 0
+INFO 2025-12-22 22:30:48,603 basehttp "GET /topics/3/ HTTP/1.1" 200 6430
+INFO 2025-12-22 22:30:48,672 basehttp "GET /static/js/custom.js HTTP/1.1" 304 0
+INFO 2025-12-22 22:30:51,535 basehttp "GET /new_entry/3/ HTTP/1.1" 200 8007
+INFO 2025-12-22 22:30:53,832 basehttp "POST /new_entry/3/ HTTP/1.1" 302 0
+INFO 2025-12-22 22:30:53,867 basehttp "GET /topics/3/ HTTP/1.1" 200 8266
+INFO 2025-12-22 22:31:09,323 basehttp "GET /topics/ HTTP/1.1" 200 6851
+INFO 2025-12-22 22:31:09,396 basehttp "GET /static/js/custom.js HTTP/1.1" 304 0
+INFO 2025-12-22 22:31:10,300 basehttp "GET / HTTP/1.1" 200 4640
+INFO 2025-12-22 22:31:11,214 basehttp "GET /topics/ HTTP/1.1" 200 6851
+INFO 2025-12-22 22:31:12,084 basehttp "GET /topics/1/ HTTP/1.1" 200 5415
+INFO 2025-12-22 22:31:13,297 basehttp "GET /topics/ HTTP/1.1" 200 6851
+INFO 2025-12-22 22:31:14,008 basehttp "GET /topics/3/ HTTP/1.1" 200 7973
+INFO 2025-12-22 22:31:14,861 basehttp "GET /topics/ HTTP/1.1" 200 6851
+INFO 2025-12-22 22:31:16,164 basehttp "GET /topics/1/ HTTP/1.1" 200 5415
+INFO 2025-12-22 22:31:17,051 basehttp "GET /topics/ HTTP/1.1" 200 6851
+INFO 2025-12-22 22:31:19,997 basehttp "GET /delete_topic/1/ HTTP/1.1" 200 5156
+INFO 2025-12-22 22:31:21,530 basehttp "POST /delete_topic/1/ HTTP/1.1" 302 0
+INFO 2025-12-22 22:31:21,551 basehttp "GET /topics/ HTTP/1.1" 200 6213
+INFO 2025-12-22 22:31:23,606 basehttp "GET /statistics/ HTTP/1.1" 200 8010
+INFO 2025-12-22 22:31:36,749 basehttp "GET /topics/ HTTP/1.1" 200 5900
+INFO 2025-12-22 22:31:36,806 basehttp "GET /static/js/custom.js HTTP/1.1" 304 0
+INFO 2025-12-23 11:08:50,309 autoreload Watching for file changes with StatReloader
+INFO 2025-12-23 11:09:03,167 basehttp "GET / HTTP/1.1" 200 4640
+INFO 2025-12-23 11:09:03,225 basehttp "GET /static/css/custom.css HTTP/1.1" 304 0
+INFO 2025-12-23 11:09:03,225 basehttp "GET /static/js/custom.js HTTP/1.1" 304 0
+INFO 2025-12-23 11:09:04,665 basehttp "GET /accounts/register/ HTTP/1.1" 200 6019
+INFO 2025-12-23 11:09:07,306 basehttp "GET /topics/ HTTP/1.1" 200 5900
+INFO 2025-12-23 11:09:08,414 basehttp "GET /topics/3/ HTTP/1.1" 200 7973
+WARNING 2025-12-23 11:09:15,396 log Not Found: /favicon.ico
+WARNING 2025-12-23 11:09:15,397 basehttp "GET /favicon.ico HTTP/1.1" 404 5183
+INFO 2025-12-23 11:09:32,102 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-23 11:09:32,157 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2366
+INFO 2025-12-23 11:09:32,480 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 796
+INFO 2025-12-23 11:09:32,492 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2619
+INFO 2025-12-23 11:09:32,494 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 18854
+INFO 2025-12-23 11:09:32,494 basehttp "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2025-12-23 11:09:32,495 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 20344
+INFO 2025-12-23 11:09:32,501 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3763
+INFO 2025-12-23 11:09:32,519 basehttp "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+INFO 2025-12-23 11:09:32,569 basehttp "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+INFO 2025-12-23 11:09:32,570 basehttp "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+INFO 2025-12-23 11:09:32,572 basehttp "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+INFO 2025-12-23 11:09:34,768 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2498
+INFO 2025-12-23 11:09:38,219 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2498
+INFO 2025-12-23 11:15:40,538 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2501
+INFO 2025-12-23 11:15:47,237 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2501
+INFO 2025-12-23 11:19:26,821 autoreload Watching for file changes with StatReloader
+INFO 2025-12-23 11:19:30,702 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-12-23 11:19:30,744 basehttp "GET /admin/ HTTP/1.1" 200 5395
+INFO 2025-12-23 11:19:30,879 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 200 380
+INFO 2025-12-23 11:19:30,887 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-12-23 11:19:30,887 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-12-23 11:21:35,237 basehttp "GET /admin/blogs/blogpost/add/ HTTP/1.1" 200 8909
+INFO 2025-12-23 11:21:35,298 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 200 8944
+INFO 2025-12-23 11:21:35,300 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-12-23 11:21:35,302 basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 5698
+INFO 2025-12-23 11:21:35,306 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 8398
+INFO 2025-12-23 11:21:35,306 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8919
+INFO 2025-12-23 11:21:35,306 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+INFO 2025-12-23 11:21:35,313 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 7902
+INFO 2025-12-23 11:21:35,314 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-12-23 11:21:35,317 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2025-12-23 11:21:35,318 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 200 11297
+INFO 2025-12-23 11:21:35,319 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-12-23 11:21:35,320 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 288580
+INFO 2025-12-23 11:21:35,322 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+INFO 2025-12-23 11:21:35,337 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 200 1043
+INFO 2025-12-23 11:21:44,307 basehttp "GET /admin/learning_logs/topic/add/ HTTP/1.1" 200 9921
+INFO 2025-12-23 11:21:44,359 basehttp "GET /static/admin/js/collapse.js HTTP/1.1" 200 1803
+INFO 2025-12-23 11:21:44,359 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 8398
+INFO 2025-12-23 11:21:46,179 basehttp "GET /admin/learning_logs/entry/add/ HTTP/1.1" 200 9989
+INFO 2025-12-23 11:21:46,227 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 8398
+INFO 2025-12-23 11:21:52,082 basehttp "GET /admin/auth/user/add/ HTTP/1.1" 200 8867
+INFO 2025-12-23 11:21:52,150 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 8398
+INFO 2025-12-23 11:21:54,293 basehttp "GET /admin/auth/group/add/ HTTP/1.1" 200 10319
+INFO 2025-12-23 11:21:54,341 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 8398
+INFO 2025-12-23 11:21:54,343 basehttp "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4360
+INFO 2025-12-23 11:21:54,344 basehttp "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 11317
+INFO 2025-12-23 11:21:54,461 basehttp "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2025-12-23 11:21:54,461 basehttp "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+INFO 2025-12-23 11:21:54,461 basehttp "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+INFO 2025-12-23 11:21:54,461 basehttp "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+INFO 2025-12-23 11:22:08,538 basehttp "GET /admin/auth/user/add/ HTTP/1.1" 200 8867
+INFO 2025-12-23 11:22:08,575 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 8398
+INFO 2025-12-23 11:23:03,010 basehttp "GET /topics/ HTTP/1.1" 200 5371
+INFO 2025-12-23 11:23:03,822 basehttp "GET / HTTP/1.1" 200 4643
+INFO 2025-12-23 11:23:04,546 basehttp "GET /topics/ HTTP/1.1" 200 5371
+INFO 2025-12-23 11:23:05,037 basehttp "GET / HTTP/1.1" 200 4643
+INFO 2025-12-23 11:23:06,660 basehttp "GET /topics/ HTTP/1.1" 200 5371
+INFO 2025-12-23 11:23:07,472 basehttp "GET /new_topic/ HTTP/1.1" 200 7769
+INFO 2025-12-23 11:23:40,644 basehttp "GET /topics/ HTTP/1.1" 200 5371
+INFO 2025-12-23 11:23:42,767 basehttp "GET / HTTP/1.1" 200 4643
+INFO 2025-12-23 11:23:44,199 basehttp "GET /topics/ HTTP/1.1" 200 5371
+INFO 2025-12-23 11:23:44,681 basehttp "GET /topics/ HTTP/1.1" 200 5371
+INFO 2025-12-23 11:23:50,931 basehttp "GET /new_topic/ HTTP/1.1" 200 7769
+INFO 2025-12-23 11:23:57,027 basehttp "POST /new_topic/ HTTP/1.1" 302 0
+INFO 2025-12-23 11:23:57,039 basehttp "GET /topics/ HTTP/1.1" 200 6216
+INFO 2025-12-23 11:23:58,116 basehttp "GET /topics/6/ HTTP/1.1" 200 5418
+INFO 2025-12-23 11:23:59,369 basehttp "GET /new_entry/6/ HTTP/1.1" 200 8010
+INFO 2025-12-23 11:25:57,138 basehttp "GET /new_entry/6/ HTTP/1.1" 200 8010
+INFO 2025-12-23 11:27:05,029 basehttp "GET /topics/6/ HTTP/1.1" 200 5418
+INFO 2025-12-23 11:27:06,492 basehttp "GET /new_entry/6/ HTTP/1.1" 200 8010
+INFO 2025-12-23 11:28:01,213 basehttp "GET /topics/6/ HTTP/1.1" 200 5418
+INFO 2025-12-23 11:28:02,314 basehttp "GET /new_entry/6/ HTTP/1.1" 200 8010
+INFO 2025-12-23 11:28:28,343 basehttp "GET /admin/learning_logs/topic/ HTTP/1.1" 200 11864
+INFO 2025-12-23 11:28:28,387 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 6395
+INFO 2025-12-23 11:28:28,389 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 8398
+INFO 2025-12-23 11:28:28,454 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 966
+INFO 2025-12-23 11:28:28,476 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2025-12-23 11:28:28,476 basehttp "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO 2025-12-23 11:28:32,742 basehttp "GET /admin/blogs/blogpost/ HTTP/1.1" 200 7861
+INFO 2025-12-23 11:28:32,807 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 8398
+INFO 2025-12-23 11:28:34,063 basehttp "GET /admin/learning_logs/topic/ HTTP/1.1" 200 11864
+INFO 2025-12-23 11:28:34,121 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 8398
+INFO 2025-12-23 11:29:03,226 basehttp "GET /admin/learning_logs/entry/ HTTP/1.1" 200 11125
+INFO 2025-12-23 11:29:03,273 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 8398
+INFO 2025-12-23 11:34:38,543 basehttp "GET / HTTP/1.1" 200 4643
+INFO 2025-12-23 11:34:39,576 basehttp "GET /topics/ HTTP/1.1" 200 5903
+INFO 2025-12-23 11:34:40,138 basehttp "GET / HTTP/1.1" 200 4643
+INFO 2025-12-23 11:34:40,902 basehttp "GET /accounts/register/ HTTP/1.1" 200 6022
+INFO 2025-12-23 11:34:42,853 basehttp "GET /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-12-23 11:34:42,862 basehttp "GET / HTTP/1.1" 200 4643
+INFO 2025-12-23 11:34:44,405 basehttp "GET /topics/ HTTP/1.1" 200 5903
+INFO 2025-12-23 11:34:45,204 basehttp "GET / HTTP/1.1" 200 4643
+INFO 2025-12-23 11:37:13,621 autoreload C:\Users\zhu72\source\repos\chapter_20\styling_learning_log\blogs\views.py changed, reloading.
+INFO 2025-12-23 11:37:14,268 autoreload Watching for file changes with StatReloader
+INFO 2025-12-23 11:37:37,808 basehttp "GET /accounts/register/ HTTP/1.1" 200 6022
+INFO 2025-12-23 11:40:37,180 autoreload C:\Users\zhu72\source\repos\chapter_20\styling_learning_log\blogs\views.py changed, reloading.
+INFO 2025-12-23 11:40:37,742 autoreload Watching for file changes with StatReloader
+INFO 2025-12-23 11:41:37,074 basehttp "GET /accounts/register/ HTTP/1.1" 200 6022
+INFO 2025-12-23 11:41:40,416 basehttp "GET /topics/ HTTP/1.1" 200 5903
+INFO 2025-12-23 11:41:41,119 basehttp "GET / HTTP/1.1" 200 4643
+INFO 2025-12-23 11:41:41,989 basehttp "GET /accounts/register/ HTTP/1.1" 200 6022
+INFO 2025-12-23 11:41:43,527 basehttp "GET /accounts/register/ HTTP/1.1" 200 6022
+INFO 2025-12-23 11:41:45,993 basehttp "GET /topics/ HTTP/1.1" 200 5903
+INFO 2025-12-23 11:41:46,674 basehttp "GET / HTTP/1.1" 200 4643
+INFO 2025-12-23 11:41:47,191 basehttp "GET /topics/ HTTP/1.1" 200 5903
+INFO 2025-12-23 11:41:49,009 basehttp "GET /topics/ HTTP/1.1" 200 5903
+INFO 2025-12-23 11:41:51,228 basehttp "GET /accounts/register/ HTTP/1.1" 200 6022
+INFO 2025-12-23 11:42:07,222 autoreload Watching for file changes with StatReloader
+INFO 2025-12-23 11:42:09,023 basehttp "GET /accounts/register/ HTTP/1.1" 200 6022
+INFO 2025-12-23 11:42:11,029 basehttp "GET /topics/ HTTP/1.1" 200 5903
+INFO 2025-12-23 11:42:11,543 basehttp "GET / HTTP/1.1" 200 4643
+INFO 2025-12-23 11:42:12,552 basehttp "GET /accounts/register/ HTTP/1.1" 200 6022
+INFO 2025-12-23 11:42:14,159 basehttp "GET /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-12-23 11:42:14,167 basehttp "GET / HTTP/1.1" 200 4643
+INFO 2025-12-23 11:42:15,180 basehttp "GET /accounts/register/ HTTP/1.1" 200 6022
+INFO 2025-12-23 11:42:16,544 basehttp "GET /topics/ HTTP/1.1" 200 5903
+INFO 2025-12-23 11:42:21,047 basehttp "GET / HTTP/1.1" 200 4643
+INFO 2025-12-23 11:42:22,010 basehttp "GET /accounts/register/ HTTP/1.1" 200 6022
+INFO 2025-12-23 11:42:37,551 basehttp "GET /blogs/ HTTP/1.1" 200 4612
+INFO 2025-12-23 11:42:43,342 basehttp "GET /blogs/new_post/ HTTP/1.1" 200 5242
+INFO 2025-12-23 11:42:57,509 basehttp "POST /blogs/new_post/ HTTP/1.1" 302 0
+INFO 2025-12-23 11:42:57,530 basehttp "GET /blogs/posts/1/ HTTP/1.1" 200 4719
+INFO 2025-12-23 11:43:00,417 basehttp "GET /blogs/edit_post/1/ HTTP/1.1" 200 5269
+INFO 2025-12-23 11:43:03,341 basehttp "GET /blogs/posts/1/ HTTP/1.1" 200 4420
+INFO 2025-12-23 11:43:04,594 basehttp "GET / HTTP/1.1" 200 4643
+INFO 2025-12-23 11:43:05,201 basehttp "GET /topics/ HTTP/1.1" 200 5903
+INFO 2025-12-23 11:43:05,627 basehttp "GET / HTTP/1.1" 200 4643
+INFO 2025-12-23 11:43:06,183 basehttp "GET /accounts/register/ HTTP/1.1" 200 6022
+INFO 2025-12-23 11:43:07,287 basehttp "GET /topics/ HTTP/1.1" 200 5903
+INFO 2025-12-23 11:43:08,209 basehttp "GET /new_topic/ HTTP/1.1" 200 7769
+INFO 2025-12-23 11:43:09,455 basehttp "GET / HTTP/1.1" 200 4643
+INFO 2025-12-23 11:43:10,037 basehttp "GET /topics/ HTTP/1.1" 200 5903
+INFO 2025-12-23 11:43:10,487 basehttp "GET / HTTP/1.1" 200 4643
+INFO 2025-12-23 11:43:10,903 basehttp "GET /topics/ HTTP/1.1" 200 5903
+INFO 2025-12-23 11:43:11,334 basehttp "GET / HTTP/1.1" 200 4643
+INFO 2025-12-23 11:46:21,367 basehttp "GET / HTTP/1.1" 200 4643
+INFO 2025-12-23 11:46:22,641 basehttp "GET /topics/ HTTP/1.1" 200 5903
+INFO 2025-12-23 11:46:23,167 basehttp "GET / HTTP/1.1" 200 4643
+INFO 2025-12-23 11:46:26,095 basehttp "GET / HTTP/1.1" 200 4643
+INFO 2025-12-23 12:17:34,734 autoreload Watching for file changes with StatReloader
+INFO 2025-12-23 12:18:19,708 basehttp "GET /admin/learning_logs/entry/?date_added__gte=2025-12-16+00%3A00%3A00%2B08%3A00&date_added__lt=2025-12-24+00%3A00%3A00%2B08%3A00 HTTP/1.1" 200 13406
+INFO 2025-12-23 12:18:20,069 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8919
+INFO 2025-12-23 12:18:20,069 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+INFO 2025-12-23 12:18:20,072 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-12-23 12:18:20,072 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 7902
+INFO 2025-12-23 12:18:20,078 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 6395
+INFO 2025-12-23 12:18:20,078 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-12-23 12:18:20,080 basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 5698
+INFO 2025-12-23 12:18:20,087 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 8398
+INFO 2025-12-23 12:18:20,090 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 288580
+INFO 2025-12-23 12:18:20,090 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+INFO 2025-12-23 12:18:20,110 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 966
+INFO 2025-12-23 12:18:20,125 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2025-12-23 12:18:20,126 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-12-23 12:18:24,680 basehttp "GET / HTTP/1.1" 200 6295
+INFO 2025-12-23 12:18:26,896 basehttp "GET /blogs/ HTTP/1.1" 200 5016
+INFO 2025-12-23 12:18:27,792 basehttp "GET /blogs/posts/1/ HTTP/1.1" 200 6078
+INFO 2025-12-23 12:18:31,497 basehttp "GET /blogs/ HTTP/1.1" 200 5016
+INFO 2025-12-23 12:18:32,501 basehttp "GET /blogs/posts/1/ HTTP/1.1" 200 6078
+INFO 2025-12-23 12:18:44,128 basehttp "POST /blogs/posts/1/ HTTP/1.1" 302 0
+INFO 2025-12-23 12:18:44,138 basehttp "GET /blogs/posts/1/ HTTP/1.1" 200 6897
+INFO 2025-12-23 12:18:55,153 basehttp "GET /blogs/ HTTP/1.1" 200 5067
+INFO 2025-12-23 12:18:56,707 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 12:18:57,798 basehttp "GET /topics/6/ HTTP/1.1" 200 5573
+INFO 2025-12-23 12:18:58,785 basehttp "GET /blogs/ HTTP/1.1" 200 5067
+INFO 2025-12-23 12:18:59,298 basehttp "GET /blogs/ HTTP/1.1" 200 5067
+INFO 2025-12-23 12:18:59,928 basehttp "GET /blogs/ HTTP/1.1" 200 5067
+INFO 2025-12-23 12:19:02,084 basehttp "GET /blogs/ HTTP/1.1" 200 5067
+INFO 2025-12-23 12:19:02,586 basehttp "GET /blogs/ HTTP/1.1" 200 5067
+INFO 2025-12-23 12:19:03,169 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 12:19:03,876 basehttp "GET /blogs/ HTTP/1.1" 200 5067
+INFO 2025-12-23 12:19:04,293 basehttp "GET /blogs/ HTTP/1.1" 200 5067
+INFO 2025-12-23 12:19:04,734 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 12:19:08,437 basehttp "GET /blogs/ HTTP/1.1" 200 5067
+INFO 2025-12-23 12:19:08,904 basehttp "GET /blogs/ HTTP/1.1" 200 5067
+INFO 2025-12-23 12:19:09,451 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 12:19:09,756 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 12:19:10,298 basehttp "GET /blogs/ HTTP/1.1" 200 5067
+INFO 2025-12-23 12:19:10,778 basehttp "GET /blogs/ HTTP/1.1" 200 5067
+INFO 2025-12-23 12:19:11,249 basehttp "GET /blogs/ HTTP/1.1" 200 5067
+INFO 2025-12-23 12:19:11,572 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 12:19:41,099 basehttp "GET /blogs/ HTTP/1.1" 200 5067
+INFO 2025-12-23 12:19:42,514 basehttp "GET /blogs/new_post/ HTTP/1.1" 200 5397
+INFO 2025-12-23 12:19:51,730 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 12:19:52,841 basehttp "GET /blogs/ HTTP/1.1" 200 5067
+INFO 2025-12-23 12:19:54,145 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 12:19:54,600 basehttp "GET /blogs/ HTTP/1.1" 200 5067
+INFO 2025-12-23 12:19:54,982 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 12:19:55,371 basehttp "GET /blogs/ HTTP/1.1" 200 5067
+INFO 2025-12-23 12:19:55,704 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 12:19:56,184 basehttp "GET /blogs/ HTTP/1.1" 200 5067
+INFO 2025-12-23 12:19:56,612 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 12:19:57,354 basehttp "GET /blogs/ HTTP/1.1" 200 5067
+INFO 2025-12-23 12:19:57,804 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 12:19:58,432 basehttp "GET /topics/6/ HTTP/1.1" 200 5573
+INFO 2025-12-23 12:19:59,272 basehttp "GET /new_entry/6/ HTTP/1.1" 200 8753
+INFO 2025-12-23 12:20:01,322 basehttp "POST /new_entry/6/ HTTP/1.1" 302 0
+INFO 2025-12-23 12:20:01,427 basehttp "GET /topics/6/ HTTP/1.1" 200 7020
+INFO 2025-12-23 12:20:02,966 basehttp "GET /blogs/ HTTP/1.1" 200 5067
+INFO 2025-12-23 12:20:03,804 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 12:20:04,773 basehttp "GET /topics/6/ HTTP/1.1" 200 6727
+INFO 2025-12-23 12:20:06,986 basehttp "GET /blogs/ HTTP/1.1" 200 5067
+INFO 2025-12-23 12:20:07,463 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 12:20:07,905 basehttp "GET /blogs/ HTTP/1.1" 200 5067
+INFO 2025-12-23 12:22:43,947 autoreload C:\Users\zhu72\source\repos\chapter_20\styling_learning_log\learning_logs\models.py changed, reloading.
+INFO 2025-12-23 12:22:44,669 autoreload Watching for file changes with StatReloader
+INFO 2025-12-23 12:23:02,914 autoreload C:\Users\zhu72\source\repos\chapter_20\styling_learning_log\learning_logs\forms.py changed, reloading.
+INFO 2025-12-23 12:23:03,641 autoreload Watching for file changes with StatReloader
+INFO 2025-12-23 12:23:22,628 autoreload C:\Users\zhu72\source\repos\chapter_20\styling_learning_log\learning_logs\forms.py changed, reloading.
+INFO 2025-12-23 12:23:23,258 autoreload Watching for file changes with StatReloader
+INFO 2025-12-23 12:24:01,752 autoreload C:\Users\zhu72\source\repos\chapter_20\styling_learning_log\blogs\models.py changed, reloading.
+INFO 2025-12-23 12:24:02,223 autoreload Watching for file changes with StatReloader
+INFO 2025-12-23 12:24:23,174 autoreload C:\Users\zhu72\source\repos\chapter_20\styling_learning_log\blogs\models.py changed, reloading.
+INFO 2025-12-23 12:24:23,700 autoreload Watching for file changes with StatReloader
+INFO 2025-12-23 12:24:50,802 autoreload C:\Users\zhu72\source\repos\chapter_20\styling_learning_log\learning_logs\models.py changed, reloading.
+INFO 2025-12-23 12:24:51,354 autoreload Watching for file changes with StatReloader
+INFO 2025-12-23 12:25:11,253 autoreload C:\Users\zhu72\source\repos\chapter_20\styling_learning_log\learning_logs\models.py changed, reloading.
+INFO 2025-12-23 12:25:11,764 autoreload Watching for file changes with StatReloader
+INFO 2025-12-23 12:25:38,856 autoreload C:\Users\zhu72\source\repos\chapter_20\styling_learning_log\blogs\views.py changed, reloading.
+INFO 2025-12-23 12:25:39,337 autoreload Watching for file changes with StatReloader
+INFO 2025-12-23 12:25:57,162 autoreload C:\Users\zhu72\source\repos\chapter_20\styling_learning_log\blogs\views.py changed, reloading.
+INFO 2025-12-23 12:25:57,775 autoreload Watching for file changes with StatReloader
+INFO 2025-12-23 12:26:33,203 autoreload C:\Users\zhu72\source\repos\chapter_20\styling_learning_log\blogs\views.py changed, reloading.
+INFO 2025-12-23 12:26:33,707 autoreload Watching for file changes with StatReloader
+INFO 2025-12-23 12:27:00,727 autoreload C:\Users\zhu72\source\repos\chapter_20\styling_learning_log\blogs\urls.py changed, reloading.
+INFO 2025-12-23 12:27:01,240 autoreload Watching for file changes with StatReloader
+INFO 2025-12-23 12:29:21,942 autoreload C:\Users\zhu72\source\repos\chapter_20\styling_learning_log\blogs\models.py changed, reloading.
+INFO 2025-12-23 12:29:22,582 autoreload Watching for file changes with StatReloader
+INFO 2025-12-23 12:31:36,159 autoreload C:\Users\zhu72\source\repos\chapter_20\styling_learning_log\blogs\models.py changed, reloading.
+INFO 2025-12-23 12:31:36,664 autoreload Watching for file changes with StatReloader
+INFO 2025-12-23 21:37:02,026 autoreload Watching for file changes with StatReloader
+INFO 2025-12-23 21:37:12,575 basehttp "GET / HTTP/1.1" 200 6295
+INFO 2025-12-23 21:37:12,628 basehttp "GET /static/css/custom.css HTTP/1.1" 304 0
+INFO 2025-12-23 21:37:12,758 basehttp "GET /static/js/custom.js HTTP/1.1" 200 24112
+INFO 2025-12-23 21:37:14,061 basehttp "GET /blogs/ HTTP/1.1" 200 5324
+INFO 2025-12-23 21:37:15,078 basehttp "GET /blogs/posts/1/ HTTP/1.1" 200 6078
+WARNING 2025-12-23 21:37:18,961 log Not Found: /favicon.ico
+WARNING 2025-12-23 21:37:18,962 basehttp "GET /favicon.ico HTTP/1.1" 404 5183
+INFO 2025-12-23 21:37:21,330 basehttp "GET /blogs/new_post/ HTTP/1.1" 200 5397
+INFO 2025-12-23 21:37:46,039 basehttp "POST /blogs/new_post/ HTTP/1.1" 302 0
+INFO 2025-12-23 21:37:46,051 basehttp "GET /blogs/posts/2/ HTTP/1.1" 200 6399
+INFO 2025-12-23 21:37:47,800 basehttp "GET /blogs/ HTTP/1.1" 200 5986
+INFO 2025-12-23 21:37:50,088 basehttp "GET /blogs/posts/2/ HTTP/1.1" 200 6100
+INFO 2025-12-23 21:38:29,368 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 21:38:30,519 basehttp "GET /topics/6/ HTTP/1.1" 200 6727
+INFO 2025-12-23 21:38:34,134 basehttp "GET /blogs/ HTTP/1.1" 200 5986
+INFO 2025-12-23 21:38:34,830 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 21:38:35,262 basehttp "GET /blogs/ HTTP/1.1" 200 5986
+INFO 2025-12-23 21:38:36,208 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 21:38:37,207 basehttp "GET /topics/6/ HTTP/1.1" 200 6727
+INFO 2025-12-23 21:38:40,866 basehttp "GET /new_entry/6/ HTTP/1.1" 200 9113
+INFO 2025-12-23 21:38:47,109 basehttp "GET /blogs/ HTTP/1.1" 200 5986
+INFO 2025-12-23 21:38:50,279 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 21:38:51,123 basehttp "GET /blogs/ HTTP/1.1" 200 5986
+INFO 2025-12-23 21:38:51,454 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 21:38:51,981 basehttp "GET /blogs/ HTTP/1.1" 200 5986
+INFO 2025-12-23 21:38:53,212 basehttp "GET /blogs/new_post/ HTTP/1.1" 200 5397
+INFO 2025-12-23 21:38:57,297 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 21:39:00,246 basehttp "GET /blogs/ HTTP/1.1" 200 5986
+INFO 2025-12-23 21:39:01,197 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 21:39:01,662 basehttp "GET /blogs/ HTTP/1.1" 200 5986
+INFO 2025-12-23 21:39:03,770 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 21:46:22,304 autoreload Watching for file changes with StatReloader
+INFO 2025-12-23 21:46:25,606 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 21:46:28,099 basehttp "GET /topics/6/ HTTP/1.1" 200 6727
+INFO 2025-12-23 21:46:31,775 basehttp "GET /blogs/ HTTP/1.1" 200 5986
+INFO 2025-12-23 21:46:34,229 basehttp "GET /blogs/posts/2/ HTTP/1.1" 200 6100
+INFO 2025-12-23 21:46:36,535 basehttp "GET /blogs/new_post/ HTTP/1.1" 200 7402
+INFO 2025-12-23 21:46:48,881 basehttp "GET /blogs/ HTTP/1.1" 200 5986
+INFO 2025-12-23 21:46:49,393 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 21:46:50,343 basehttp "GET /new_topic/ HTTP/1.1" 200 7924
+INFO 2025-12-23 21:46:53,589 basehttp "GET /blogs/ HTTP/1.1" 200 5986
+INFO 2025-12-23 21:46:55,297 basehttp "GET /blogs/ HTTP/1.1" 200 5986
+INFO 2025-12-23 21:46:55,890 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 21:46:56,462 basehttp "GET /blogs/ HTTP/1.1" 200 5986
+INFO 2025-12-23 21:46:57,405 basehttp "GET /blogs/posts/2/ HTTP/1.1" 200 6100
+INFO 2025-12-23 21:46:59,533 basehttp "GET /blogs/posts/2/ HTTP/1.1" 200 6100
+INFO 2025-12-23 21:47:01,706 basehttp "GET /blogs/ HTTP/1.1" 200 5986
+INFO 2025-12-23 21:47:31,477 basehttp "GET /blogs/posts/2/ HTTP/1.1" 200 6100
+INFO 2025-12-23 21:47:34,185 basehttp "GET /blogs/edit_post/2/ HTTP/1.1" 200 7209
+INFO 2025-12-23 21:47:40,121 basehttp "GET /blogs/posts/2/ HTTP/1.1" 200 6100
+INFO 2025-12-23 21:47:41,627 basehttp "GET /blogs/ HTTP/1.1" 200 5986
+INFO 2025-12-23 21:47:42,132 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 21:47:43,680 basehttp "GET /topics/6/ HTTP/1.1" 200 6727
+INFO 2025-12-23 21:47:50,700 basehttp "GET /blogs/ HTTP/1.1" 200 5986
+INFO 2025-12-23 21:48:07,464 basehttp "GET /blogs/posts/2/ HTTP/1.1" 200 6100
+INFO 2025-12-23 21:48:16,096 basehttp "GET /topics/ HTTP/1.1" 200 6058
+INFO 2025-12-23 21:48:17,675 basehttp "GET /topics/6/ HTTP/1.1" 200 6727
+INFO 2025-12-23 21:48:19,795 basehttp "GET /topics/6/ HTTP/1.1" 200 6727
+INFO 2025-12-23 21:48:24,825 basehttp "GET /new_entry/6/ HTTP/1.1" 200 9113
+INFO 2025-12-23 21:49:07,055 basehttp "POST /new_entry/6/ HTTP/1.1" 302 0
+INFO 2025-12-23 21:49:07,070 basehttp "GET /topics/6/ HTTP/1.1" 200 8326
+INFO 2025-12-23 21:49:09,416 basehttp "GET /blogs/ HTTP/1.1" 200 6838
+INFO 2025-12-23 22:31:36,633 basehttp "GET / HTTP/1.1" 200 5610
+INFO 2025-12-23 22:31:36,801 basehttp "GET /static/css/custom.css HTTP/1.1" 200 8112
+INFO 2025-12-23 22:31:36,803 basehttp "GET /static/js/custom.js HTTP/1.1" 200 24112
+INFO 2025-12-23 22:32:31,986 basehttp "GET /accounts/register/ HTTP/1.1" 200 5306
+INFO 2025-12-23 22:32:34,845 basehttp "GET / HTTP/1.1" 200 5610
+INFO 2025-12-23 22:32:44,685 basehttp "GET / HTTP/1.1" 200 5610
+INFO 2025-12-23 22:32:44,734 basehttp "GET /static/css/custom.css HTTP/1.1" 200 8112
+INFO 2025-12-23 22:32:44,734 basehttp "GET /static/js/custom.js HTTP/1.1" 200 24112
+WARNING 2025-12-23 22:32:51,919 log Not Found: /favicon.ico
+WARNING 2025-12-23 22:32:51,920 basehttp "GET /favicon.ico HTTP/1.1" 404 5183
+INFO 2025-12-23 22:33:16,156 basehttp "GET /blogs/ HTTP/1.1" 200 6063
+INFO 2025-12-23 22:33:25,995 basehttp "GET /accounts/register/ HTTP/1.1" 200 5306
+INFO 2025-12-23 22:33:27,768 basehttp "GET /blogs/ HTTP/1.1" 200 6063
+INFO 2025-12-24 19:41:57,121 autoreload Watching for file changes with StatReloader
+INFO 2025-12-24 19:42:01,671 basehttp "GET / HTTP/1.1" 200 6295
+INFO 2025-12-24 19:42:01,745 basehttp "GET /static/css/custom.css HTTP/1.1" 304 0
+INFO 2025-12-24 19:42:01,757 basehttp "GET /static/js/custom.js HTTP/1.1" 304 0
+WARNING 2025-12-24 19:42:03,539 log Not Found: /favicon.ico
+WARNING 2025-12-24 19:42:03,543 basehttp "GET /favicon.ico HTTP/1.1" 404 5183
