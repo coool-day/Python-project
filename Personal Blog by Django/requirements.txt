@@ -1,0 +1,22 @@
+# Django 学习笔记项目依赖
+
+# Web 框架
+Django>=4.1,<5.0
+
+# Bootstrap 集成
+django-bootstrap5>=1.0.0
+
+# Markdown 支持
+markdown>=3.0
+
+# 生产环境建议（可选安装，根据实际部署需要）
+# Redis 缓存
+django-redis>=5.0.0
+# 静态文件加速
+whitenoise>=6.0.0
+
+# 开发工具（可选）
+# pytest>=7.0.0
+# pytest-django>=4.5.0
+# coverage>=7.0.0
+
