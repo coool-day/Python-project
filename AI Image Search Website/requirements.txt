@@ -1,0 +1,7 @@
+numpy
+scipy
+Pillow
+torch
+transformers
+faiss-cpu  # 用于大规模图库的高效向量相似度检索
+requests  # 用于更快的图片下载（支持连接池）
